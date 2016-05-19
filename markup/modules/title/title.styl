@@ -1,0 +1,28 @@
+.title
+	color color-second
+	font-family font-second-family
+	font-size 50px
+	text-transform uppercase
+	text-align center
+	display inline-block
+	min-width 470px
+	position relative
+	padding-x(15px)
+
+	&:before
+		content ''
+		position absolute
+		width 100%
+		top 50%
+		left 0
+		height 1px
+		background-color color-second
+
+	+below('m')
+		min-width auto
+
+	+below('s')
+		font-size 30px
+
+	+below('xs')
+		font-size 25px

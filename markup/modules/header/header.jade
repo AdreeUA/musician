@@ -1,0 +1,10 @@
+include ../nav/nav
+include ../logo/logo
+
+mixin header(data)
+	+b.SECTION.header&attributes(attributes)
+		+nav(nav.defaults).__nav#navigation
+		+e.burger-wrap
+			+e.BUTTON.burger#burgerButton
+				+e.SPAN.burger-icon
+		+logo

@@ -1,0 +1,105 @@
+.testimonial
+	background-image url(__static__assets/testimonial/bg-testimonial.jpg)
+	background-size cover
+	background-position 50% 50%
+	text-align center
+	position relative
+	padding 186px 0 86px
+	
+	&__item
+		padding-bottom 80px
+		width 100%
+		
+	&__inner
+		max-width 900px
+		margin-x(40px)
+		display inline-block
+	
+	.icon
+		color #fff
+		
+	.icon_lightning-left
+	.icon_lightning-right
+		width 28px
+		height 8px
+	.icon_note
+		width 25px
+		height 29px
+		margin 0 22px 0
+		position relative
+		bottom -4px
+		
+	&__heading
+		margin-bottom 47px
+		
+	&__title
+		font-size 18px
+		line-height 26px
+		text-transform uppercase
+		font-family font-second-famyly
+		color #fff
+		margin-bottom 45px
+		
+	&__text
+		max-width 510px
+		line-height 1.4
+		center()
+		margin-bottom 67px
+		
+	&__date
+		color #565e61
+		
+	&__arrow-right
+	&__arrow-left	
+	&__arrow-right:before
+	&__arrow-left:before
+		absolute-center()
+		cursor pointer
+		
+	&__arrow-left
+		left 0
+		triangle(85px, 160px, right, #fff)	
+			
+	&__arrow-right
+		right 0
+		triangle(85px, 160px, left, #fff)
+		
+	&__arrow-left
+	&__arrow-right
+		z-index 5
+		&:before
+			width 11px
+			height 22px
+	
+	&__arrow-left
+		&:before
+			content url(__static__assets/testimonial/arrow-left.svg)		
+			left -62px
+
+	&__arrow-right
+		&:before
+			content url(__static__assets/testimonial/arrow-right.svg)
+			right -62px
+			
+	&__paginations
+		list-style-type none
+		margin 0
+		padding 0
+		
+		li
+			display inline-block
+			vertical-align top
+		li:not(:last-child)
+			margin-right 38px
+		.slick-active
+			button
+				background-color transparent
+				border 1px solid #fff
+				box-sizing contant-box	
+
+		button
+			border 1px solid #fff
+			text-indent -9999px
+			size(11px, 14px)
+			border-radius 50%
+			background-color #fff

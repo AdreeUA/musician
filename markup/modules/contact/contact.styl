@@ -1,0 +1,74 @@
+.contact
+	background-image url(__static__assets/contact/bg-contact.jpg)
+	background-position center center
+	background-size cover
+	background-repeat no-repeat
+	clearfix()
+	padding 151px 0 289px
+
+	+below('m')
+		padding-top 50px
+		background-position center 125px
+
+
+	&__inner
+		width 50%
+		float right
+
+		+below('m')
+			width 80%
+			center()
+			float none
+
+	&__content
+		max-width 560px
+
+	&__address
+		margin-bottom 15px
+
+	&__phone
+		text-decoration none
+		color inherit
+
+	&__forms
+		display flex
+		align-items flex-end
+		justify-content space-between
+		padding-top 107px
+
+		+below('m')
+			padding-top 50px
+
+		+below('xs')
+			flex-wrap wrap
+
+	.contact-form
+		width 67%
+		margin-bottom 25px
+
+		+below('xs')
+			width 100%
+
+	&__social
+		padding-bottom 60px
+		text-align center
+		center()
+
+	.social
+		border-left 1px solid color-second
+		padding-left 15px
+
+		+below('xs')
+			width 100%
+			border none
+
+
+		&__item
+			padding 10px
+			margin-bottom 55px
+
+			&:last-child
+				margin-bottom 10px
+
+			+below('xs')
+				display inline-block

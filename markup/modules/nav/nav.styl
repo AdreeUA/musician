@@ -1,0 +1,73 @@
+.nav
+	background-color rgba(#00080c, .1)
+	font-size 17px
+	color #606060
+	z-index 10
+	
+	+below('l')	
+		position fixed
+		transform translateX(-100%)
+		transition transform .6s cubic-bezier(.56, .1, .34, .91)
+		height 100%
+		background-color rgba(#000, .8)
+		// transition all .5s
+		left 0
+		right 0
+		top 0
+		bottom 0
+		font-size 20px
+		color #fff
+			
+		.nav__link
+			padding 10px
+			&:hover
+				color #bebebe
+		&_open
+			transform translateX(0)
+			// transition all .5s
+				
+			
+
+		.container
+			height 100%
+	
+	&__list
+		list-style-type none
+		margin 0
+		padding 0
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+		
+		+below('l')
+			flex-direction column
+			justify-content center
+			align-items center
+			height 100%
+			width 100%
+			flex-wrap nowrap
+		
+	&__item
+		// display inline-block
+
+	&__link
+		font-family font-second-famyly
+		text-transform uppercase
+		color inherit
+		text-decoration none
+		padding 27px 0 22px
+		display block
+		position relative
+		
+		&:hover
+			// border-bottom 2px solid
+			color color-second
+			
+			&:before
+				content ''
+				position absolute
+				bottom 9px
+				left 0
+				width 100%
+				height 2px
+				background-color #000

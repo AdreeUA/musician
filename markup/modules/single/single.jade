@@ -1,0 +1,20 @@
+include ../song-info/song-info
+
+mixin single(data)
+	+b.single&attributes(attributes)
+		each ent, num in data
+			+e.item_(class="single__item_#{ent.mod}")
+				+e.inner
+					+e.info
+						+e.SPAN.data= ent.data
+						+e.HR.decor
+						+e.SPAN.category= ent.category
+					+e.content
+						+e.H3.title= ent.title
+						+e.P.disc= ent.disc
+					+e.btns
+						+btn.A.__btn.btn_link(href="#") Visit the iTunes
+						if ent.info
+							+song-info(ent.info)
+				+e.player(style="background-image:url(__static__img/assets/single/#{ent.poster})")
+

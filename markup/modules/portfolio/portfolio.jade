@@ -1,0 +1,15 @@
+mixin portfolio(data)
+	+b.SECTION.portfolio&attributes(attributes)#portfolio
+		.container
+			+e.list
+				each ent, num in data
+					if (num < 10)
+						- cur = "0" + (1 + num)
+					+e.item(style="background-image:url(__static__img/assets/portfolio/#{ent.poster})")
+						+e.item-inner
+							+e.date= ent.date
+							+e.HR.decor
+							+e.category= ent.category
+							+e.H3.title= ent.title
+							+e.P.disc= ent.disc
+						+e.current-number= cur

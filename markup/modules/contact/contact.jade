@@ -1,0 +1,19 @@
+include ../contact-form/contact-form
+include ../title/title
+include ../social/social
+
+mixin contact(data)
+	+b.contact&attributes(attributes)#contact
+		+e.inner
+			+e.content
+				+title contact
+				+e.address Canada Island, Division No. 23, Unorganized, MB, Canada
+				+e.A.phone(href="tel: +1(778) 288 5180") Tel. +1(778) 288 5180
+				+e.forms
+					+contact-form
+						+e.INPUT.item_name(type="text" placeholder="Name")
+						+e.INPUT.item_email(type="email" placeholder="E mail")
+						+e.TEXTAREA.item_message(placeholder="Message")
+						+e.BUTTON.btn Send
+					+e.social
+						+social(social.defaults)

@@ -1,0 +1,17 @@
+include ../btn/btn
+
+mixin discography-list(data)
+	+b.discography-list&attributes(attributes)
+		each ent, num in data
+			+e.item
+				+e.info
+					+e.SPAN.year #{ent.year}
+					+e.HR.decor
+					+e.SPAN.category= ent.category 
+				+e.content
+					+e.H3.title= ent.title
+					+e.P.disc= ent.disc
+					if ent.btnColor
+						+btn.__btn(class="#{ent.btnColor}" style="background-image:url(__static__img/assets/discography-list/btn-#{ent.btn}.jpg)") Play
+					else
+						+btn.__btn(style="background-image:url(__static__img/assets/discography-list/btn-#{ent.btn}.jpg)") Play

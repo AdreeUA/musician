@@ -1,0 +1,17 @@
+include ../title/title
+
+mixin history(data)
+	+b.SECTION.history&attributes(attributes)#history
+		each ent, num in data
+			+title= ent.title
+			+e.P.text= ent.text
+			if ent.items
+				+e.list
+					+e.list-date
+						each item, i in ent.items
+							+e.item-date
+								+e.date= item.date
+					+e.list-disc
+						each item, i in ent.items
+							+e.item-disc
+								+e.disc= item.disc

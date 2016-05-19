@@ -1,0 +1,15 @@
+include ../btn/btn
+
+mixin concert(data)
+	+b.concert&attributes(attributes)
+		each ent, num in data
+			.container
+				+e.inner
+					+e.info
+						+e.SPAN.data= ent.data
+						+e.HR.decor
+						+e.category= ent.category
+					+e.content
+						+e.H3.title= ent.title
+						+e.P.disc= ent.disc
+						+btn.A.__btn.btn_link(href="#{ent.url}") Buy online

@@ -1,0 +1,56 @@
+.discography-list
+	color color-second
+
+	&__item
+		display flex
+		text-align left
+		margin-bottom 113px
+
+		+below('xs')
+			flex-wrap wrap
+
+	&__info
+		width 40%
+		margin-right 25px
+
+		+below('xs')
+			width 100%
+
+	&__content
+		width 60%
+
+		+below('xs')
+			width 100%
+
+	&__year
+		color rgba(#000, .65)
+		margin-bottom 7px
+		display inline-block
+
+	&__decor
+		color color-second
+		background-color color-second
+		border none
+		height 1px
+		margin-bottom 10px
+
+	&__category
+		text-transform uppercase
+		color color-second
+
+	&__title
+		font-size 23px
+		margin-top 0
+		margin-bottom 18px
+
+	&__disc
+		color #acacac
+		line-height 1.4
+		margin-bottom 30px
+
+	&__btn
+		border none
+		background-size cover
+
+		&.btn_white
+			color #fff

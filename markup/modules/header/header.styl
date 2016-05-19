@@ -1,0 +1,87 @@
+.header
+	background-image url(__static__assets/header/bg-header.jpg)
+	background-repeat no-repeat
+	background-size cover
+	background-position center top
+	min-height 1062px
+
+
+	&__nav
+		//
+
+	&__burger-wrap
+		display none
+
+		+below('l')
+			display block
+			position fixed
+			top 51px
+			right 67px
+			z-index 10
+		+mobile()
+			top 15px
+			right 15px
+
+
+	&__burger
+		display block
+		position relative
+		background transparent
+		width $button-radius
+		height $button-radius
+		border-radius 4px
+		text-align center
+		vertical-align middle
+		transition all .5s ease
+		border $button-line-height solid transparent
+		transition all .3s linear 0s
+
+		&_open
+			border $button-line-height solid $color-button
+			box-shadow none
+
+		&_open &-icon
+			background transparent
+
+			&:before, &:after
+				transform-origin 0 50%
+				width 40px
+
+			&:before
+				transform rotateZ(.64350111rad)
+
+			&:after
+				transform rotateZ(-.64350111rad)
+
+	&__burger-icon
+		display inline-block
+		position absolute
+		background $color-button
+		margin 0 auto
+		width $burger-width
+		height $button-line-height
+		border-radius 4px
+		top 50%
+		left 4px
+		right 0
+		transition all .5s ease
+		transform translateY(-.5 * $button-line-height)
+
+		&:before, &:after
+			content ''
+			position absolute
+			margin 0 auto
+			background $color-button
+			border-radius 4px
+			width $burger-width
+			height $button-line-height
+			left 0
+			right 0
+			transition all .5s ease
+
+
+		&:before
+			bottom $burger-gutter
+
+		&:after
+			top $burger-gutter

@@ -1,0 +1,7 @@
+mixin social(data)
+	+b.UL.social&attributes(attributes)
+		each ent, num in data
+			-var iconName = ent.icon
+			+e.item
+				+e.link_fb(href="#{ent.link}")= ent.name
+					!= jadeHelpers.Icon.call(locals, {iconName , className: ent.className})

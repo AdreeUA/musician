@@ -1,0 +1,63 @@
+.history
+	padding-top 160px
+	text-align center
+
+	.title
+		color #5b5c5a
+		margin 0 0 60px
+
+	&__text
+		max-width 810px
+		center()
+
+	&__list
+		background-image url(__static__assets/history/bg-history.jpg)
+		background-repeat no-repeat
+		background-position 50% -139px
+		min-height 777px
+		padding-top 190px
+		//
+
+	&__item-date
+		position relative
+
+
+	&__date
+		color rgba(#000, .28)
+		font-family font-second-family
+		font-size 35px
+		text-transform uppercase
+		margin-bottom 40px
+		text-align center
+		position relative
+		cursor pointer
+
+		&:before
+		&:after
+			position absolute
+			content ''
+			border 1px solid #afafaf
+			width 42%
+			top 50%
+
+		&:before
+			right -22%
+		&:after
+			left -20%
+
+		+below('xs')
+			font-size 20px
+
+	&__disc
+		max-width 200px
+		center()
+		color #5a5a58
+		text-align center
+
+	.slick-center
+		// margin 0 20px
+		&.history__item-date:before
+		&.history__item-date:after
+			border none
+		.history__date
+			color #575a59

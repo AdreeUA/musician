@@ -1,0 +1,19 @@
+mixin song-info(data)
+	+b.UL.song-info&attributes(attributes)
+		each ent, num in data
+			+e.item
+				+e.SPAN.icon_heard
+					!= jadeHelpers.Icon.call(locals, {iconName: 'heard', className:'icon icon_heard'})
+					| #{ent.heard}
+			+e.item
+				+e.SPAN.icon_like 
+					!= jadeHelpers.Icon.call(locals, {iconName: 'like', className:'icon icon_like'})
+					| #{ent.like}
+			+e.item
+				+e.SPAN.icon_option
+					!= jadeHelpers.Icon.call(locals, {iconName: 'options', className:'icon icon_options'})
+					| #{ent.option}
+			+e.item
+				+e.SPAN.icon_comments
+					!= jadeHelpers.Icon.call(locals, {iconName: 'comments', className:'icon icon_comments'})
+					| #{ent.comments}

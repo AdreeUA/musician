@@ -1,0 +1,25 @@
+extends ../modules/layout-default/layout-default
+include ../modules/header/header
+include ../modules/discography/discography
+include ../modules/concert-tours/concert-tours
+include ../modules/compositions/compositions
+include ../modules/testimonial/testimonial
+include ../modules/portfolio/portfolio
+include ../modules/events/events
+include ../modules/history/history
+include ../modules/contact/contact
+
+block head
+	+head(head.defaults)
+
+block content
+	//- Include your modules here
+	+header()
+	+discography()
+	+concert-tours()
+	+compositions()
+	+testimonial(testimonial.defaults)
+	+portfolio(portfolio.defaults)
+	+events()
+	+history(history.defaults)
+	+contact(contact.defaults)

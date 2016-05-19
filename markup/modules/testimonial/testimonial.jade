@@ -1,0 +1,21 @@
+mixin testimonial(data)
+	+b.testimonial&attributes(attributes)
+		+e.list
+			each ent, num in data
+				+e.item
+					+e.inner
+						+e.heading
+							!= jadeHelpers.Icon.call(locals, {iconName: 'lightning-left', className:'icon icon_lightning-left'})
+							!= jadeHelpers.Icon.call(locals, {iconName: 'note', className:'icon icon_note'})
+							!= jadeHelpers.Icon.call(locals, {iconName: 'lightning-right', className:'icon icon_lightning-right'})
+						+e.H3.title !{ent.title}
+						+e.P.text= ent.text
+						+e.date= ent.date
+
+		+e.paginations
+			+e.SPAN.pagination
+			+e.SPAN.pagination
+
+		//- +e.arrows
+		//- 	+e.SPAN.arrow-left
+		//- 	+e.SPAN.arrow-right

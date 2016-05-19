@@ -1,0 +1,94 @@
+.single
+
+	&__item
+		display flex
+		text-align left
+		color color-second
+		background-color color-single
+
+		+below('l')
+			flex-direction column
+			width 80%
+			center()
+
+		+below('s')
+			width auto
+
+		&_even
+			flex-direction row-reverse
+
+			+below('l')
+				flex-direction column
+
+		&:nth-of-type(even)
+			.single__inner:before
+				left -12px
+				triangle(13px, 22px, left, color-single)
+		&:nth-of-type(odd)
+			.single__inner:before
+				right -12px
+				triangle(13px, 22px, right, color-single)
+
+	&__inner
+	&__player
+		width 50%
+		box-sizing border-box
+
+		+below('l')
+			width auto
+
+	&__player
+		min-height 500px
+
+	&__inner
+		padding 35px
+		position relative
+
+		&:before
+			content ''
+			position absolute
+			top 50%
+			margin-top -7px
+
+		+below('m')
+			padding 20px
+
+		+below('s')
+			padding 10px
+
+	&__info
+		width 60%
+		margin-bottom 48px
+
+	&__data
+		color rgba(#000, .65)
+
+	&__decor
+		height 1px
+		border none
+		background-color color-second
+
+	&__category
+		font-family font-base-family-bold
+		text-transform uppercase
+
+	&__content
+		margin-bottom 60px
+
+	&__title
+		font-size 23px
+		margin 0 0 36px
+
+	&__btns
+		display flex
+		align-items flex-end
+		justify-content space-between
+
+		+below('m')
+			flex-wrap wrap
+			.btn
+				margin-bottom 10px
+
+	&__player
+		background-size cover
+		background-position center center

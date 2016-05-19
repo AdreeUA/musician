@@ -1,0 +1,10 @@
+include ../title/title
+include ../disc/disc
+include ../single/single
+
+mixin compositions(data)
+	+b.SECTION.compositions&attributes(attributes)#compositions
+		.container
+			+title.__title  latter compositions
+			+disc.__disc "It's Time" was released as the lead single from Continued Silence and It's Time, both extended plays preceding Night Visions' release.
+			+single(single.defaults).__item

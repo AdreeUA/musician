@@ -1,0 +1,77 @@
+.portfolio
+	padding-top 165px
+	padding-bottom 95px
+
+	+below('s')
+		padding-bottom 20px
+
+	&__list
+		display flex
+		flex-wrap wrap
+		justify-content space-around
+
+	&__item
+		width 384px
+		min-height 422px
+		margin-right 10px
+		padding 35px
+		box-sizing border-box
+		position relative
+		overflow hidden
+		background-repeat no-repeat
+		background-size cover
+		background-position 50% 50%
+		z-index 1
+		margin-bottom 28px
+
+		&:before
+			content ''
+			position absolute
+			top 0
+			left 0
+			height 100%
+			width 100%
+			background-color rgba(#fff, .60)
+			z-index 2
+
+		+below('s')
+			width 100%
+			margin-right 0
+
+		+below('xs')
+			padding 10px
+
+	&__item-inner
+		position relative
+		z-index 3
+
+	&__date
+		color rgba(#000, .65)
+
+	&__decor
+		border none
+		height 1px
+		background-color #000
+		margin 12px 0 10px
+
+	&__category
+		color #fff
+		font-size 14px
+		text-transform uppercase
+		margin-bottom 48px
+
+	&__title
+		font-size 23px
+		color color-second
+		margin-bottom 64px
+
+	&__desc
+		line-height 1.5
+
+	&__current-number
+		position absolute
+		right 0
+		bottom -.4em
+		color rgba(#000, .17)
+		font-size 82px
+		z-index 2

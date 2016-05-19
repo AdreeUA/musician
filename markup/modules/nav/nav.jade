@@ -1,0 +1,7 @@
+mixin nav(data)
+	+b.NAV.nav&attributes(attributes)
+		.container
+			+e.UL.list
+				each ent, num in data
+					+e.item
+						+e.link(href="#{ent.url}")= ent.title
